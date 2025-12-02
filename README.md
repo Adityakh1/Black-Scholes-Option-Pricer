@@ -1,5 +1,5 @@
 # Black-Scholes Option Pricer
-This is a small Python project that calculates **call and put option prices** using the Black-Scholes formula.  
+This is a Python project that calculates **call and put option prices** using the Black-Scholes formula.  
 I built it to understand how options work and how things like **volatility, time, and risk free interest rates** affect their prices.  
 
 

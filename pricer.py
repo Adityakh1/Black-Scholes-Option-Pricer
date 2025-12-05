@@ -1,10 +1,10 @@
 import math
 
-# Function to calculate cumulative normal distribution
+
 def norm_cdf(x):
     return 0.5 * (1.0 + math.erf(x / math.sqrt(2.0)))
 
-# Black-Scholes price function
+
 def black_scholes_price(S, K, T, r, sigma):
     if T <= 0 or sigma <= 0:
         call = max(0.0, S - K * math.exp(-r * T))
@@ -22,7 +22,6 @@ continue_program = True
 
 while continue_program:
 
-    # Input with error handling
     try:
         S = float(input("Enter Stock Price (S): "))
         K = float(input("Enter Strike Price (K): "))
@@ -31,12 +30,12 @@ while continue_program:
         sigma = float(input("Enter Volatility (σ) in decimal (example 0.20): "))
     except ValueError:
         print("Invalid input! Please enter numbers only.\n")
-        continue  # Go back to start of loop
-
-    # Calculate call and put prices
+        continue  
+        
+ 
     call, put = black_scholes_price(S, K, T, r, sigma)
 
-    # Print professional summary
+  
     print("\n========== Option Pricing Summary ==========")
     print(f"Stock Price (S)       : {S:.2f}")
     print(f"Strike Price (K)      : {K:.2f}")
@@ -48,8 +47,9 @@ while continue_program:
     print(f"Put Option Price       : {put:.4f}")
     print("===========================================\n")
 
-    # Ask if user wants to calculate another option
+    
     user_choice = input("Do you want to calculate another option? (yes/no): ").lower()
     if user_choice != "yes":
         continue_program = False
         print("Thank you for using the Option Pricer!")
+
